@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*,*::before,*::after{
+box-sizing: border-box;
+}
+:root{
+  scroll-behavior: smooth;
+  scroll-padding: var(--scroll-padding);
+  --text-primary:#141b30;
+  --text-secondary:#3d4973;
+  --bg-light:rgb(243, 250, 252);
+  --bg-overlay:rgba(243, 250, 252, 0.637);
+}
+body{
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-primary);
+}
+nav{
+  /* border: 1px solid black; */
+  box-shadow: 0px 2px 6px -4px gray;
+  position: sticky;
+  background-color: var(--bg-light);
+  top: 0;
+  z-index: 100;
+}
+.icn{
+  display: flex;
+  align-items: center;
+}
+.menubar{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  margin-left: 20px;
+  /* background-image: url("3menu.svg") ; */
+}
+.hide{
+  transform: rotateY(90deg);
+  scale:0;
+} 
+.menu{
+  width: 40px;
+  position: absolute;
+  left:0.2rem;
+  top:0.2rem;
+  transition: transform 1s ease,scale 300ms ease;
+}
+.cross{
+  height: 30px;
+  position: absolute;
+  left:0.5rem;
+  top:0.5rem;
+  transition: transform 1s ease,scale 300ms ease;
+  display: block;
+}
+.psg{
+  height: 60px;
+  margin-left: auto;
+}
+.title{
+  margin: 0px 1rem;
+  font-size: 1.3em;
+}
+.aic{
+  height: 85px;
+  margin-right: auto;
+  position: relative;
+  bottom: 5px;
+}
+nav ul{
+  list-style: none;
+  width: 40%;
+  min-width: 10rem;
+  max-width: 15rem;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  margin: 0;
+  top: 0;
+  padding-top: 5rem ;
+  padding-left: 0;
+  box-shadow: 2px 0px 6px -4px rgb(66, 12, 12);
+  transition: all 1s ease-in-out;
+}
+.trans100{
+  transform:translateX(-110%);
+}
+.scale{
+  transform: scale(0);
+}
+.nav_item{
+  font-size: 1.3rem;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
+  color: var(--text-secondary);
+  padding: 0.7rem 1rem;
+  text-transform: capitalize;
+  transition: all 700ms ease-out;
+}
+.nav_item::after{
+  content: '';
+  display: block;
+  background-color: #141b30;
+  height: 2px;
+  width: 0;
+  transition: width 500ms ease-in-out
+}
+.nav_item:hover::after{
+  width: 75%;
+}
+.bg_container{
+  width: 85%;
+  margin: auto;
+}
+.home{
+  margin: 0;
+  min-height: calc(100vh - var(--scroll-padding));
+  background-color:var(--bg-light) ;
+  background-image: url('images-college.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center var(--scroll-padding);
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+.home::before{
+  content: '';
+  display: block;
+  background-image: linear-gradient(to right,rgba(239, 255, 253, 0.644),rgba(204, 255, 251, 0.548));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-attachment: fixed;
+  z-index: -1;
+}
+.home{
+  text-align: center;
+  text-shadow: 4px 4px 4px white;
+}
+.home .bg_container{
+  width: 70%;
+}
+.clg_name,.home_head{
+  margin-top:0 ;
+  padding-top:6rem ;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.clg_addr{
+  font-size: 2rem;
+  font-weight: 500;
+}
+.dates{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.home_head{
+  padding-top: 3rem;
+}
+.fade-out{
+  animation: fade-out ease-out;
+  animation-timeline: view();
+  animation-range:exit;
+
+}
+.contact img{
+  display: none;
+}
+
+@keyframes fade-out{
+  to{scale: 0.5;opacity: 0;}
+}
+@media(width<700px){
+  :root{
+    font-size: 14px;
+  }
+  .title{
+    display: none;
+  }
+  .aic{
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .psg{
+    margin: auto;
+  }
+  .menubar{
+    margin-right: auto;
+    margin-left: 20px;
+  }
+  iframe{
+    width: 80%;
+  }
+}
+@media(width<400px){
+  .menubar{
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
