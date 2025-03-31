@@ -5,10 +5,13 @@ box-sizing: border-box;
 :root{
   scroll-behavior: smooth;
   scroll-padding: var(--scroll-padding);
-  --text-primary:#141b30;
+  --text-primary:#050236;
   --text-secondary:#3d4973;
-  --bg-light:rgb(243, 250, 252);
-  --bg-overlay:rgba(243, 250, 252, 0.637);
+  --bg-light:#fffcee;
+  --bg-nav:#fffcef;
+  --stripe-color: #fff;
+  --bg: var(--stripe-color);
+  --maincolor: var(--bg);
 }
 body{
   margin: 0;
@@ -76,7 +79,7 @@ nav ul{
   height: 100vh;
   position: absolute;
   z-index: 1;
-  background-color: white;
+  background-color: var(--bg-nav);
   margin: 0;
   top: 0;
   padding-top: 5rem ;
@@ -94,16 +97,16 @@ nav ul{
   font-size: 1.3rem;
   display: block;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--text-secondary);
-  padding: 0.7rem 1rem;
+  padding: 0.7rem 1.5rem;
   text-transform: capitalize;
   transition: all 700ms ease-out;
 }
 .nav_item::after{
   content: '';
   display: block;
-  background-color: #141b30;
+  background-color: var(--text-primary);
   height: 2px;
   width: 0;
   transition: width 500ms ease-in-out
@@ -119,7 +122,7 @@ nav ul{
   margin: 0;
   min-height: calc(100vh - var(--scroll-padding));
   background-color:var(--bg-light) ;
-  background-image: url('images-college.jpg');
+  background-image: url('../assests_images/images-college.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center var(--scroll-padding);
@@ -130,7 +133,7 @@ nav ul{
 .home::before{
   content: '';
   display: block;
-  background-image: linear-gradient(to right,rgba(239, 255, 253, 0.644),rgba(204, 255, 251, 0.548));
+  background-image: linear-gradient(to right,rgba(255, 250, 228, 0.506),rgba(255, 250, 228, 0.506));
   width: 100%;
   height: 100%;
   position: absolute;
@@ -139,27 +142,37 @@ nav ul{
 }
 .home{
   text-align: center;
-  text-shadow: 4px 4px 4px white;
+  text-shadow: 2px 2px 4px white;
 }
 .home .bg_container{
   width: 70%;
 }
-.clg_name,.home_head{
-  margin-top:0 ;
-  padding-top:6rem ;
+header{
+  background-color: var(--bg-light);
+  padding-bottom: 0.5em;
+}
+.clg_name{
+  margin:0;
+  padding-top:4rem ;
   font-size: 2.5rem;
   font-weight: 700;
 }
 .clg_addr{
-  font-size: 2rem;
+  margin-top: 0.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
+}
+.clg_addr span{
+  font-size: 1.2rem;
 }
 .dates{
   font-size: 1.5rem;
   font-weight: 500;
 }
 .home_head{
-  padding-top: 3rem;
+  padding-top: 6rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }
 .fade-out{
   animation: fade-out ease-out;
@@ -195,10 +208,27 @@ nav ul{
   iframe{
     width: 80%;
   }
+  .clg_name{
+    padding-top: 2rem;
+  }
+  .home_head{
+    padding-top: 1rem;
+    font-size: 2.2rem;
+  }
 }
 @media(width<400px){
   .menubar{
     margin-right: auto;
     margin-left: auto;
+  }
+  nav ul {
+    width: 50%;
+    max-width: 200px;
+  }
+  .nav_item{
+    padding-left: 2rem;
+  }
+  nav ul li:first-child{
+    padding-top: 1rem;
   }
 }
