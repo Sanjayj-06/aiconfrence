@@ -1,0 +1,93 @@
+#contact {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding:2rem ;
+    background-color: #f4f4f4;
+}
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+.contact-container div {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; 
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container div:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+  
+.contact1, .contact2 {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact3, .contact4 {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header {
+    text-transform: uppercase; 
+    font-weight: bold;
+    font-family: 'Arial Black';
+    text-align: center;
+    margin: 0 auto;
+  }
+
+#contact .footer {
+    font-weight: bold;
+    font-family: 'Arial Black';
+    text-align: center;
+    margin: 0 auto;
+  }
+
+#contact svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    fill: black; 
+}
+
+.email-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    fill: black; 
+}
+
+
+  
+#contact p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+#contact a {
+    color: #007BFF;
+    text-decoration: none;
+}
+#contact a:hover {
+    text-decoration: underline;
+}

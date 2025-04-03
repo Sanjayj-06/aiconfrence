@@ -1,0 +1,69 @@
+#venue,#sponsor{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #f8f9fa, #e9ecef);
+    color: #333;
+    animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+#venue .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+#venue .card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #FFD700;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+#venue .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+.sponsor-logo {
+    height: 110px;
+    filter: grayscale(100%);
+    transition: transform 0.4s ease-out, filter 0.4s ease-out;
+    border-radius: 10px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+}
+.sponsor-logo:hover {
+    filter: grayscale(0%);
+    transform: scale(1.15) rotate(2deg);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+}
+.footer {
+    background: #ddd;
+    color: #333;
+    padding: 14px 0;
+    text-align: center;
+    margin-top: auto;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+}
+#venue h2,#sponsor h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #DAA520;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: fadeIn 1.5s ease-out;
+}
+#venue p,#sponsor p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #555;
+}

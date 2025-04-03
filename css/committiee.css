@@ -11,7 +11,7 @@
     align-items: center;
     gap: 40px;
 }
-.gold-box {
+.c_gold-box {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -28,11 +28,11 @@
     max-width: 450px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
-.gold-box:hover {
+.c_gold-box:hover {
     transform: translateY(-10px); 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 }
-.gold-box img {
+.c_gold-box img {
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -41,12 +41,12 @@
     box-shadow: 0 0 10px rgba(184, 134, 11, 0.5); 
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
-.gold-box img:hover {
+.c_gold-box img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 25px rgba(184, 134, 11, 0.8); 
     border: 5px solid #eacc21; 
 }
-.committee img {
+.c_committee img {
     width: 130px;
     height: 130px;
     object-fit:cover; 
@@ -55,33 +55,33 @@
     box-shadow: 0 0 15px rgba(128, 128, 128, 0.8); 
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
-.committee img:hover {
+.c_committee img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 25px rgba(192, 192, 192, 1);
     border: 5px solid #f6f4f4; 
 }
-.gold-box .details {
+.c_gold-box .c_details {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.gold-box .details strong, .committee .details strong {
+.c_gold-box .c_details strong, .c_committee .c_details strong {
     font-weight: bold; 
     font-size: 1.1em;
 }
-.gold-box .details p, .committee .details p {
+.c_gold-box .c_details p, .c_committee .c_details p {
     font-weight: lighter; 
     font-size: 0.9em;
     margin: 0;
 }
-.section {
+.c_section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 30px;
     max-width: 1000px;
 }
-.committee {
+.c_committee {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -97,19 +97,19 @@
     max-width: 450px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
-.committee:hover {
+.c_committee:hover {
     transform: translateY(-10px); 
     box-shadow: 0 8px 25px rgba(192, 192, 192, 0.8); 
 }
-.committee .details {
+.c_committee .c_details {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.committee .details strong {
+.c_committee .c_details strong {
     color: #000000; 
 }
-.committee .details p {
+.c_committee .c_details p {
     color: #4d4d4d; 
 }
 #committies h2, #committies h3 {
@@ -117,18 +117,18 @@
     margin-top: 30px;
     margin-bottom: 20px;
 }
-.section.organising-committee {
+.c_section.organising-c_committee {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
     gap: 20px;
     max-width: 1000px;
 }
-.section.organising-committee .gold-box {
+.c_section.organising-c_committee .c_gold-box {
     flex: 1 1 calc(33.33% - 40px); 
     max-width: 450px;
 }
-.section:not(.organising-committee) {
+.c_section:not(.organising-c_committee) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -136,11 +136,11 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-.section:not(.organising-committee):has(.committee:nth-child(2):last-child) {
+.c_section:not(.organising-c_committee):has(.c_committee:nth-child(2):last-child) {
     justify-content: center;
 }
 
-.section:not(.organising-committee):has(.committee:nth-child(2):last-child) .committee {
+.c_section:not(.organising-c_committee):has(.c_committee:nth-child(2):last-child) .c_committee {
     flex: 0 0 calc(48% - 50px);
     max-width: calc(100% - 100px);
 }
@@ -151,12 +151,12 @@
         width: 95%;
     }
 
-    .section {
+    .c_section {
         gap: 20px;
         width: 100%;
     }
 
-    .gold-box, .committee {
+    .c_gold-box, .c_committee {
         flex-direction: row;
         width: 100%;
         max-width: 100%;
@@ -165,13 +165,13 @@
         gap: 15px;
     }
 
-    .gold-box img, .committee img {
+    .c_gold-box img, .c_committee img {
         width: 100px;
         height: 100px;
         min-width: 100px; 
     }
 
-    .gold-box .details, .committee .details {
+    .c_gold-box .c_details, .c_committee .c_details {
         font-size: 0.9em;
         flex: 1;
     }
@@ -189,8 +189,8 @@
         margin: 15px 0;
         padding: 0 10px;
     }
-    .section:has(.committee:first-child:nth-last-child(2)),
-    .section:has(.committee:first-child:nth-last-child(2) ~ .committee) {
+    .c_section:has(.c_committee:first-child:nth-last-child(2)),
+    .c_section:has(.c_committee:first-child:nth-last-child(2) ~ .c_committee) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -200,7 +200,7 @@
         gap: 15px;
     }
 
-    .section:has(.committee:first-child:nth-last-child(2)) .committee {
+    .c_section:has(.c_committee:first-child:nth-last-child(2)) .c_committee {
         width: 98%;
         max-width: 98%;
         margin: 5px auto;
@@ -214,18 +214,18 @@
         padding: 5px;
     }
 
-    .gold-box, .committee {
+    .c_gold-box, .c_committee {
         padding: 12px;
         margin: 8px 0;
     }
 
-    .gold-box img, .committee img {
+    .c_gold-box img, .c_committee img {
         width: 80px;
         height: 80px;
         min-width: 80px;
     }
 
-    .gold-box .details, .committee .details {
+    .c_gold-box .c_details, .c_committee .c_details {
         font-size: 0.85em;
     }
 
@@ -236,7 +236,7 @@
     #committies h3 {
         font-size: 1.2em;
     }
-    .section:has(.committee:first-child:nth-last-child(2)) .committee {
+    .c_section:has(.c_committee:first-child:nth-last-child(2)) .c_committee {
         width: 98%;
         max-width: 98%;
         margin: 5px auto;
