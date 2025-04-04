@@ -10,6 +10,9 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .c_gold-box {
     display: flex;
@@ -79,10 +82,11 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
-
 
 .c_committee {
     flex: 0 0 calc(50% - 30px);
@@ -139,12 +143,16 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .c_section.organising-committee .c_gold-box {
     flex: 0 0 calc(50% - 30px);
     max-width: 450px;
+    margin: 15px;
 }
 .c_section:not(.organising-c_committee) {
     display: flex;
